@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta chratset="utf-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <title>Index</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- fonts -->
+  <link rel="stylesheet" href="assets/fonts/bootstrap-icons-1.7.1/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav>
+      <div class="container">
+        <navbar class="navbar" id="navbar">
+          <a class="logo" href="index.html">
+            <h2>My Blog</h2>
+          </a>
+          <ul class="list" id="list">
+            <li class="list-item">
+              <a class="list-link" href="#">Home</a>
+            </li>
+            <li class="list-item">
+              <a class="list-link" href="#">Shop</a>
+            </li>
+            <div class="dropdown">
+              <button class="btn btn-category">Categories <i class="bi bi-chevron-down"></i></button>
+              <div class="dropdown-content">
+                <a href="#">New</a>
+                <a href="#">Sport</a>
+                <a href="#">Movie</a>
+              </div>
+            </div>
+
+            <li class="list-item">
+              <a class="list-link" href="#">Contact</a>
+            </li>
+            <li class="list-item">
+              <a class="list-link" href="#">About</a>
+            </li>
+          </ul>
+          <ul class="list">
+            <li class="list-item">
+              <a class="list-link list-icon" href="#">
+                <i class="bi bi-person"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="list-link list-icon" href="#">
+                <i class="bi bi-basket3"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="list-link list-icon" onclick="changeTheme()" id="sun">
+                <i class="bi bi-sun"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="list-link list-icon activated" onclick="changeTheme()" id="moon">
+                <i class="bi bi-moon"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="list-link list-icon activated" onclick="showSearch()" id="searchIcon">
+                <i class="bi bi-search"></i>
+              </a>
+              <a class="list-link list-icon" onclick="showSearch()" id="searchCloseIcon">
+                <i class="bi bi-x-lg"></i>
+              </a>
+              <form action="" class="form" id="searchForm">
+                <input type="search" id="searchFormInput" placeholder="search..." class="search">
+                <button class="btn btn-search" disabled id="getSearchButton" type="submit"><i
+                    class="bi bi-search"></i></button>
+              </form>
+
+            </li>
+          </ul>
+        </navbar>
+      </div>
+
+    </nav>
+
+    <nav class="menu" id="menu">
+      <button class="btn btn-menu" id="menu-btn" onclick="toggleMenu()">
+        <i class="bi bi-list" id="menu-icon"></i>
+      </button>
+      <a class="logo" href="index.html">
+        <h2>My Blog</h2>
+      </a>
+      <ul class="list">
+        <li class="list-item">
+          <a class="list-link list-icon" onclick="changeTheme()" id="sun">
+            <i class="bi bi-sun"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="list-link list-icon activated" onclick="changeTheme()" id="moon">
+            <i class="bi bi-moon"></i>
+          </a>
+        </li>
+      </ul>
+      <navbar class="navbar" id="navbar-menu">
+        <ul class="list" id="list-menu">
+          <li class="list-item">
+            <a class="list-link" href="#">Home</a>
+          </li>
+          <li class="list-item">
+            <a class="list-link" href="#">Shop</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-category">Categories <i class="bi bi-chevron-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#">New</a>
+              <a href="#">Sport</a>
+              <a href="#">Movie</a>
+            </div>
+          </div>
+          <li class="list-item">
+            <a class="list-link" href="#">Contact</a>
+          </li>
+          <li class="list-item">
+            <a class="list-link" href="#">About</a>
+          </li>
+        </ul>
+        <ul class="list" id="list-icon">
+          <li class="list-item">
+            <a class="list-link list-icon" href="#">
+              <i class="bi bi-person"></i>
+            </a>
+          </li>
+          <li class="list-item">
+            <a class="list-link list-icon" href="#">
+              <i class="bi bi-basket3"></i>
+            </a>
+          </li>
+          <li class="list-item">
+            <form action="" class="searchFormMenu">
+              <input type="search" placeholder="search..." class="search">
+            </form>
+            <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
+          </li>
+        </ul>
+      </navbar>
+    </nav>
+  </header>
+  <!-- slider -->
+  <div class="container">
+    <div class="slider">
+      <div class="slider-item active">
+        <img src="assets/img/colorful_macos_big_sur_apple-wallpaper-3440x1440.jpg" alt="image" class="img-slider">
+        <div class="slider-content">
+          <h2>Header Content</h2>
+          <a href="#" class="btn btn-slider">Click</a>
+        </div>
+      </div>
+      <div class="slider-item">
+        <img src="assets/img/csgo_dragon_lore-wallpaper-3440x1440.jpg" alt="image" class="img-slider">
+        <div class="slider-content">
+          <h2>Header Content</h2>
+          <a href="#" class="btn btn-slider">Click</a>
+        </div>
+      </div>
+      <div class="slider-item">
+        <img src="assets/img/imagine_csgo_7-wallpaper-3440x1440.jpg" alt="image" class="img-slider">
+        <div class="slider-content">
+          <h2>Header Content</h2>
+          <a href="#" class="btn btn-slider">Click</a>
+        </div>
+      </div>
+      <div class="slider-item">
+        <img src="assets/img/miles_morales_night_spark-wallpaper-3440x1440.jpg" alt="image" class="img-slider">
+        <div class="slider-content">
+          <h2>Header Content</h2>
+          <a href="#" class="btn btn-slider">Click</a>
+        </div>
+      </div>
+      <div class="slider-item">
+        <img src="assets/img/milky_way_from_earth-wallpaper-3440x1440.jpg" alt="image" class="img-slider">
+        <div class="slider-content">
+          <h2>Header Content</h2>
+          <a href="#" class="btn btn-slider">Click</a>
+        </div>
+      </div>
+      <div class="slider-showFade">
+        <button class="btn btn-prev"><i class="bi bi-chevron-left"></i></button>
+        <button class="btn btn-next"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- New Post -->
+  <div class="container">
+   <div class="postDiv">
+    <h3 class="newa-post-title">New Posts <i class="bi bi-check-circle"></i></h3>
+    <div class="posts">
+      <div class="post-item">
+        <a href="#">
+          <img src="assets/img/1.svg" alt="image" class="post-image">
+        </a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+      <div class="post-item">
+        <a href="#"><img src="assets/img/2.svg" alt="image"
+            class="post-image"></a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+      <div class="post-item">
+        <a href="#"><img src="assets/img/4.svg" alt="image" class="post-image"></a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+      <div class="post-item">
+        <a href="#"><img src="assets/img/5.svg" alt="image"
+            class="post-image"></a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+      <div class="post-item">
+        <a href="#"><img src="assets/img/1.svg" alt="image"
+            class="post-image"></a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+      <div class="post-item">
+        <a href="#"><img src="assets/img/2.svg" alt="image"
+            class="post-image"></a>
+        <span><i class="bi bi-eye"></i>24</span>
+        <span><i class="bi bi-clock"></i>2022/04/01</span>
+        <a href="#" class="list-link btn btn-category btn-post-item">
+          <h4 class="post-title">Title</h4>
+        </a>
+
+      </div>
+    </div>
+   </div>
+  </div>
+  <!-- static slider -->
+  <div class="container">
+    <div class="satic-slider">
+      <div class="card">
+        <div class="card-title">Title</div>
+        <div class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, adipisci?Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Amet, laudantium.</div>
+        <div class="card-footer">
+          <button class="btn btn-card">Click</button>
+        </div>
+      </div>
+      <img src="assets/img/1.svg" loading="lazy" alt="image" class="static-slider-image">
+    </div>
+  </div>
+  <!-- popular posts -->
+  <div class="container">
+    <div class="postDiv">
+      <h3 class="newa-post-title">Pupular Posts <i class="bi bi-check-circle"></i></h3>
+      <div class="posts">
+        <div class="post-item">
+          <a href="#">
+            <img src="assets/img/1.svg" alt="image" class="post-image">
+          </a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+        <div class="post-item">
+          <a href="#"><img src="assets/img/2.svg" alt="image"
+              class="post-image"></a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+        <div class="post-item">
+          <a href="#"><img src="assets/img/4.svg" alt="image" class="post-image"></a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+        <div class="post-item">
+          <a href="#"><img src="assets/img/5.svg" alt="image"
+              class="post-image"></a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+        <div class="post-item">
+          <a href="#"><img src="assets/img/1.svg" alt="image"
+              class="post-image"></a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+        <div class="post-item">
+          <a href="#"><img src="assets/img/2.svg" alt="image"
+              class="post-image"></a>
+          <span><i class="bi bi-eye"></i>24</span>
+          <span><i class="bi bi-clock"></i>2022/04/01</span>
+          <a href="#" class="list-link btn btn-category btn-post-item">
+            <h4 class="post-title">Title</h4>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- subscribe news -->
+  <div class="container">
+    <div class="subscribe">
+      <h3>Subscribe News</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, inventore.</p>
+      <form class="form-subscribe" action="index.html" method="post">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-subscribe">Join</button>
+      </form>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="site">
+      <a href="index.html"><img src="assets/img/1.svg" alt="logo" class="site-logo"></a>
+      <a href="index.html" class="link-link"><h3 class="site-title">My Blog</h3></a>
+    </div>
+    <div class="links">
+      <h3>Internal Links</h3>
+      <ul class="link-list">
+        <li class="link-item"><a href="#" class="link-link">Home <i class="bi bi-arrow-right-circle"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link">Shop <i class="bi bi-arrow-right-circle"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link">Contact <i class="bi bi-arrow-right-circle"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link">About <i class="bi bi-arrow-right-circle"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link">Login <i class="bi bi-arrow-right-circle"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link">Register <i class="bi bi-arrow-right-circle"></i></a></li>
+      </ul>
+    </div>
+    <div class="links">
+      <h3>External Links</h3>
+      <ul class="link-list">
+        <li class="link-item"><a href="#" class="link-link external-links">Google <i class="bi bi-google"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link external-links">Yahoo <i class="bi bi-messenger"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link external-links">Amazon <i class="bi bi-shop"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link external-links">Apple <i class="bi bi-apple"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link external-links">Facebook <i class="bi bi-facebook"></i></a></li>
+        <li class="link-item"><a href="#" class="link-link external-links">Instagram <i class="bi bi-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <h3>About Us</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti impedit aliquam cum non officiis, laudantium odit, ea placeat totam tenetur corporis nobis blanditiis quisquam doloribus nihil quis maxime rem obcaecati sequi. Ducimus temporibus reprehenderit eos! Ex nostrum dolor quam minima excepturi doloribus, saepe doloremque eum dolorum nisi. Animi, nesciunt debitis.</p>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
