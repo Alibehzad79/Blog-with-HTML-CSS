@@ -1,10 +1,17 @@
+function theme(){
+  localStorage.setItem('theme', 'dark-mode')
+}
+
+theme()
+
 function changeTheme() {
   const sun = document.querySelector("#sun");
   const moon = document.querySelector("#moon");
   const navbar = document.querySelector(".navbar");
   const navbarMenu = document.querySelector("#navbar-menu");
   const menu = document.querySelector("#menu");
-  
+  var theme = localStorage.getItem('theme')
+  console.log(theme)
   const element = document.body
   sun.classList.toggle('activated');
   moon.classList.toggle('activated');
@@ -95,5 +102,23 @@ function nextSlider() {
   )
 }
 
-
 nextSlider()
+
+window.onscroll = function() {goToTop()};
+
+function goToTop(){
+  const top = document.querySelector('.go-to-top')
+  let height = document.documentElement.scrollTop
+  if (height >= 650) {
+    top.style.display = 'inline';
+  } else {
+    top.style.display = 'none';
+  }
+
+  top.addEventListener('click', () => {
+    document.body.scrollTo = 0
+    document.documentElement.scrollTop = 0
+  })
+}
+
+goToTop();
